@@ -16,7 +16,6 @@ test('add to MinHeap', () => {
   heap.add(1);
   heap.add(8);
   heap.add(1);
-  // console.log(heap);
 
   heap = new MinHeap();
   heap.add(-2);
@@ -25,7 +24,6 @@ test('add to MinHeap', () => {
   heap.add(-1);
   heap.add(-8);
   heap.add(-1);
-  // console.log(heap);
 });
 
 test('poll from Min Heap', () => {
@@ -36,13 +34,9 @@ test('poll from Min Heap', () => {
   heap.add(1);
   heap.add(8);
   heap.add(1);
-  console.log(heap);
 
-  const one = heap.poll();
-  const two = heap.poll();
-  console.log(one);
-  console.log(two);
-  console.log(heap.items);
+  expect(heap.poll()).toEqual(1);
+  expect(heap.poll()).toEqual(1);
 });
 
 test('add to MaxHeap', () => {
@@ -60,7 +54,6 @@ test('add to MaxHeap', () => {
   heap.add(1);
   heap.add(8);
   heap.add(1);
-  console.log(heap);
 
   heap = new MaxHeap();
   heap.add(-2);
@@ -69,7 +62,6 @@ test('add to MaxHeap', () => {
   heap.add(-1);
   heap.add(-8);
   heap.add(-1);
-  // console.log(heap);
 });
 
 test('poll from Min Heap', () => {
@@ -80,11 +72,7 @@ test('poll from Min Heap', () => {
   heap.add(1);
   heap.add(8);
   heap.add(1);
-  // console.log(heap);
 
-  const one = heap.poll();
-  const two = heap.poll();
-  console.log(one);
-  console.log(two);
-  // console.log(heap.items);
+  expect(heap.poll()).toEqual(8);
+  expect(heap.poll()).toEqual(7);
 });
