@@ -1,4 +1,4 @@
-class FakeMinHeap {
+class MockMinHeap {
   constructor() {
     this.items = [];
   }
@@ -11,7 +11,7 @@ class FakeMinHeap {
   }
 }
 
-class FakeMaxHeap {
+class MockMaxHeap {
   constructor() {
     this.items = [];
   }
